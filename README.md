@@ -2,7 +2,7 @@
 
 Laatst geüpdatet: **7-9-2015**
 
-Dit is een data dump / simpele API voor het Handelsregister van de Kamer van Koophandel. Ik heb deze dump gemaakt omdat ik een lijst met bedrijfsnamen in Nederland nodig had voor named
+Dit is documentatie voor een spiegel-database van het Handelsregister van de Kamer van Koophandel. Ik heb deze database gemaakt omdat ik een lijst met bedrijfsnamen in Nederland nodig had voor named
 entity recognition in Nederlandse rechtspraak, en nergens een dergelijke lijst kon vinden. 
 
 Ik heb er voor gekozen om geen volledige adressen te verstrekken, alleen postcode en stadsnaam. Dit omdat ik niet wil dat deze lijst gebruikt gaat worden voor mailing lists, en om de KvK de inkomsten uit een [adressenbestand](http://www.kvk.nl/producten-bestellen/adressenbestand/) niet te ontnemen.
@@ -57,6 +57,13 @@ body:
 ## Licentie
 De Kamer van Koophandel specificeert zelf geen licentie, maar [Wet hergebruik van overheidsinformatie](http://wetten.lawly.nl/bwb/BWBR0036795) lijkt van toepassing. Onduidelijk is of het Handelsregister onder de [Databankenwet](http://wetten.lawly.nl/bwb/BWBR0010591) zou moeten vallen. Onlangs is een wetsvoorstel ingediend waardoor dit wel het geval zou zijn.
 
+Een dergelijk databankenrecht is in mijn visie onwenselijk, omdat de KvK dan een monopolie krijgt op de verstrekking van informatie uit het Handelsregister zoals momenteel het geval is met het Kadaster:
+
+> In het geval van het Kadaster heeft dit tot een volgens sommigen onwenselijke situatie geleid: door het vragen van hoge prijzen voor onbewerkte data onder restrictieve licenties en lage prijzen voor verrijkte data heeft het Kadaster een monopoliepositie verworven die onmogelijk te beconcurreren is.
+
+([ejure](http://www.ejure.nl/2013/01/open-overheidsdata/))
+
+
 
 > Het voorstel betreft: 
 - Verplichting voor bestuursorganen om geconstateerde onjuistheden in niet-authentieke gegevens in het handelsregister terug te melden; 
@@ -80,12 +87,6 @@ kant: dit is het eerste document waar door een overheidsorganisatie wordt erkent
 ([openkvk.nl brief aan Ministerie Economische Zaken](https://docs.google.com/viewer?a=v&pid=forums&srcid=MDU2Nzg5OTU4NzMwNzczNzIyODABMTg0MzA2OTg1NjkwMzAzMzk5ODgBalpUdmNCZG5zZlFKATAuMQEBdjI))
 
 
-Een dergelijk databankenrecht is ook in mijn visie onwenselijk, omdat de KvK dan een monopolie krijgt op de verstrekking van informatie uit het Handelsregister zoals momenteel het geval is met het Kadaster:
-
-
-> In het geval van het Kadaster heeft dit tot een volgens sommigen onwenselijke situatie geleid: door het vragen van hoge prijzen voor onbewerkte data onder restrictieve licenties en lage prijzen voor verrijkte data heeft het Kadaster een monopoliepositie verworven die onmogelijk te beconcurreren is.
-
-([ejure](http://www.ejure.nl/2013/01/open-overheidsdata/))
 
 Dit zou geen groot probleem zijn als de KvK zou voorzien in alle gebruiksgevallen van het Handelsregister, maar het bestaan van derde partijen zoals openkvk.nl getuigt dat dit niet het geval is. Ook rijmt een dergelijke wet niet met het Open Data-beleid dat Nederland ambieert. 
 

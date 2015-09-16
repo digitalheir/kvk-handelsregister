@@ -73,6 +73,7 @@ Twijfelachtig is of dit wel terecht is:
 maar bij wet moet worden aangeleverd is zonder twijfel de meest absurde 
 voorstel in deze hele aanpasing. Maar het kent ook een mooie
 kant: dit is het eerste document waar door een overheidsorganisatie wordt erkent dat op het Handelsregister geen expliciet voorbehoud is gemaakt, daarmee is de verzameling op dit moment open data.
+
 ([openkvk.nl brief aan Ministerie Economische Zaken](https://docs.google.com/viewer?a=v&pid=forums&srcid=MDU2Nzg5OTU4NzMwNzczNzIyODABMTg0MzA2OTg1NjkwMzAzMzk5ODgBalpUdmNCZG5zZlFKATAuMQEBdjI))
 
 

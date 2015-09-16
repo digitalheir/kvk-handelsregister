@@ -7,9 +7,9 @@ entity recognition in Nederlandse rechtspraak, en nergens een dergelijke lijst k
 
 Ik heb er voor gekozen om geen volledige adressen te verstrekken, alleen postcode en stadsnaam. Dit omdat ik niet wil dat deze lijst gebruikt gaat worden voor mailing lists, en om de KvK de inkomsten uit een [adressenbestand](http://www.kvk.nl/producten-bestellen/adressenbestand/) niet te ontnemen.
 
-Ik denk wel dat deze informatie (zonder adressen) wel nuttig kan zijn
+Ik denk wel dat deze informatie (zonder adressen) nuttig kan zijn
 voor andere andere onderzoekers, dus stel de database vrij beschikbaar. Momenteel is onduidelijk of dergelijk hergebruik
-wenselijk is en hier wordt enige politiek omtrent bedreven; zie de sectie [**Licentie**](#licentie).
+wenselijk is en hier wordt momenteel politiek omtrent bedreven; zie de sectie [**Licentie**](#licentie).
 
 Voor een (non-bulk) API waarmee je ook adressen kunt opvragen, verwijs ik naar https://openkvk.nl/.
 
@@ -22,11 +22,11 @@ De data staat in een CouchDB database en volgt de [API van CouchDB](https://wiki
 
 |URL|beschrijving|
 |---|---|
-|[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&include_docs=true&startkey=%220123%22&endkey=%220200043%22&stale=ok)| Primary index |
-|[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?limit=10&startkey=%2201000169%22&reduce=false&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer|
-|[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=[%222%22,%222%22]&reduce=false&stale=ok)|Index op postcode|
-|[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/ddoc/_view/all_names?limit=20&reduce=true&group_level=1&stale=ok)|Lijst met unieke handelsnamen|
-|[Full text search](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_search/newSearch?q=duijsen&stale=ok&limit=10)|Full text search geïndexeerd op elk veld; zie [tutorial](https://cloudant.com/for-developers/search/)|
+|[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&include_docs=true&startkey="0123"&endkey="0200043"&stale=ok)| Eerste 10 documenten vanaf kvk nummer "0123" tot "0200043" |
+|[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?limit=10&startkey="01000169"&reduce=false&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer; eerste 10 documenten vanaf "01000169"|
+|[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=["2","2"]&reduce=false&stale=ok)|Index op postcode; eerste 10 documenten vanaf postcode `22** **`|
+|[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/ddoc/_view/all_names?limit=20&reduce=true&group_level=1&stale=ok)|Lijst met unieke handelsnamen; eerste 20|
+|[Full text search](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_search/newSearch?q=duijsen&stale=ok&limit=10)|Full text search geïndexeerd op elk veld; eerste 10 resultaten van zoeken op default index met query 'duijsen'. Zie [Cloudant search tutorial](https://cloudant.com/for-developers/search/)|
 
 Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:
 

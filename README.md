@@ -29,7 +29,7 @@ Voorbeelden:
 
 Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:
 
-`**POST** https://leibniz.cloudant.com/kvk_handelsregister/_find`
+`**POST**` *https://leibniz.cloudant.com/kvk_handelsregister/_find*
 ```json
 {
   "selector": {
@@ -88,7 +88,9 @@ Dit zou geen groot probleem zijn als de KvK zou voorzien in alle gebruiksgevalle
 
 > De aanpassing van deze wet is er primair op gericht om de Kamer van Koophandel Nederland "slagvaardiger" te maken en haar informatie positie verder te monopoliseren. Private alternatieven gebruikmakend van de informatie uit het Handelsregister kunnen de pas worden afgesneden. Wij stimuleren al ruim 5 jaar het gebruik van het handelsregister. OpenKvK heeft er eigenhandig voor gezorgd dat de arrogante houding van de Kamer van Koophandel 's nachts te sluiten moest worden herzien. De uit angst voor de apps die op OpenKvK bouwden begon de Kamer van Koophandel Nederland met de ontwikkeling van eigen apps en lapte de wet Markt en Overheid aan haar laars. Waar men in België de Kruispuntbank van Ondernemingen open heeft gemaakt volgens het Nederlandse BAG model: gratis maandelijkse updates, voor een dagelijkse mutatie bestand betaalt men, wil de Nederlandse overheid de luiken verder sluiten.
 
-> [...] Tevens zijn al een aantal gemeentes bij OpenKvK gekomen of ze niet van onze API gebruik konden maken, de toegang tot het NHR is praktisch onwerkbaar: er kan niet op losse velden worden gezocht.
+> [...] 
+
+> Tevens zijn al een aantal gemeentes bij OpenKvK gekomen of ze niet van onze API gebruik konden maken, de toegang tot het NHR is praktisch onwerkbaar: er kan niet op losse velden worden gezocht.
 
 ([openkvk.nl Google Group](https://groups.google.com/forum/#!topic/openkvk/aUA1mp8bJBY))
 

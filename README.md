@@ -24,7 +24,7 @@ Voorbeelden:
 |---|---|
 |[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&include_docs=true&startkey=%220123%22&endkey=%220200043%22)| Primary index |
 |[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?starkey=%2201000169%22&group_level=2)|Index op dossiernummer, subdossiernummer, vestigingsnummer|
-|[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=[%222%22,%222%22]&stale=ok&group_level=6)|Index op postcode|
+|[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=[%222%22,%222%22]&stale=ok&group_level=4)|Index op postcode|
 |[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/ddoc/_view/all_names?limit=20&reduce=true&group_level=1)|Lijst met unieke handelsnamen|
 
 Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:

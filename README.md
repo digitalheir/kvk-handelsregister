@@ -1,0 +1,95 @@
+# Kamer van Koophandel Handelsregister
+
+Laatst geüpdatet: **7-9-2015**
+
+Dit is een data dump / simpele API voor het Handelsregister van de Kamer van Koophandel. Ik heb deze dump gemaakt omdat ik een lijst met bedrijfsnamen in Nederland nodig had voor named
+entity recognition in Nederlandse rechtspraak, en nergens een dergelijke lijst kon vinden. 
+
+Ik heb er voor gekozen om geen volledige addressen te verstrekken, alleen postcode en stadsnaam. Dit omdat ik niet wil dat deze lijst gebruikt gaat worden voor mailing lists, en om de KvK de inkomsten uit een [adressenbestand](http://www.kvk.nl/producten-bestellen/adressenbestand/) niet te ontnemen.
+
+Ik denk wel dat deze informatie wel nuttig kan zijn
+voor andere andere onderzoekers, dus stel de database vrij beschikbaar. Momenteel is onduidelijk of dergelijk hergebruik
+wenselijk is en hier wordt enige politiek omtrent bedreven; zie de sectie [**Licentie**](#licentie).
+
+Voor een (non-bulk) API waarmee je ook adressen kunt opvragen, verwijs ik naar https://openkvk.nl/.
+
+Ik geef geen garanties geven over de compleetheid van deze database. Men kan de versheid van een gegeven document staven aan het veld `lastSyncedWithKvK`.
+
+## Gebruik
+De data staat in een CouchDB database en volgt de [API van CouchDB](https://wiki.apache.org/couchdb/HTTP_Document_API)
+
+Voorbeelden:
+
+|URL|beschrijving|
+|---|---|
+|[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&include_docs=true&startkey=%220123%22&endkey=%220200043%22)| Primary index |
+|[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?starkey=%2201000169%22&group_level=2)|Index op dossiernummer, subdossiernummer, vestigingsnummer|
+|[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=[%222%22,%222%22]&stale=ok&group_level=6)|Index op postcode|
+|[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/ddoc/_view/all_names?limit=20&reduce=true&group_level=1)|Lijst met unieke handelsnamen|
+
+Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:
+
+**POST** https://leibniz.cloudant.com/kvk_handelsregister/_find 
+```json
+{
+  "selector": {
+    "postcode": {
+      "$gt": "2210",
+      "$lt": "3000AZ"
+    },
+    "type": "Hoofdvestiging"
+  },
+  "fields": [
+    "_id",
+    "_rev"
+  ],
+  "sort": [
+    {
+      "postcode": "asc"
+    }
+  ]
+}
+```
+
+## Licentie
+**???**
+
+De Kamer van Koophandel specificeert zelf geen licentie, maar [Wet hergebruik van overheidsinformatie](http://wetten.lawly.nl/bwb/BWBR0036795) lijkt van toepassing. Onduidelijk is of het Handelsregister onder de [Databankenwet](http://wetten.lawly.nl/bwb/BWBR0010591) zou moeten vallen. Onlangs is een wetsvoorstel ingediend waardoor dit wel het geval zou zijn.
+
+[Internetconsultatie Wijziging van de Handelsregisterwet 2007 en het Burgerlijk Wetboek](http://www.internetconsultatie.nl/handelsregister):
+> Het voorstel betreft: 
+- Verplichting voor bestuursorganen om geconstateerde onjuistheden in niet-authentieke gegevens in het handelsregister terug te melden; 
+- Vastlegging wettelijke basis voor de inputfinanciering, waarbij bestuursorganen het raadplegen van het handelsregister financieren door middel van een abonnement;
+[...]
+- **Voorbehoud met betrekking tot het databankenrecht voor de Kamer van Koophandel**
+
+[Memorie van Toelichting, Regels over het hergebruik van overheidsinformatie (Wet hergebruik van overheidsinformatie)](https://zoek.officielebekendmakingen.nl/kst-34123-3.html)
+> In Nederland zullen thans drie instellingen worden aangewezen voor deze uitzondering omdat zij kostendekkend moeten werken: Het Kadaster, de Dienst Wegverkeer (RDW) en de Kamer van Koophandel. De reden om deze instellingen uit te zonderen is erin gelegen dat zij de eigen bedrijfsvoering voor een groot gedeelte uit de inkomsten uit het verstrekken van de door hen geproduceerde informatie moeten financieren. Indien deze bron van inkomsten zou worden verminderd, betekent dat een inkomstenderving die niet op een andere wijze kan worden gedragen.
+
+
+Twijfelachtig is of dit wel terecht is:
+
+[openkvk.nl brief aan Ministerie Economische Zaken](https://docs.google.com/viewer?a=v&pid=forums&srcid=MDU2Nzg5OTU4NzMwNzczNzIyODABMTg0MzA2OTg1NjkwMzAzMzk5ODgBalpUdmNCZG5zZlFKATAuMQEBdjI):
+> Het claimen van een databankenrecht op iets dat niet wordt verzameld,
+maar bij wet moet worden aangeleverd is zonder twijfel de meest absurde 
+voorstel in deze hele aanpasing. Maar het kent ook een mooie
+kant: dit is het eerste document waar door een overheidsorganisatie wordt erkent dat op het Handelsregister geen expliciet voorbehoud is gemaakt, daarmee is de verzameling op dit moment open data.
+
+
+
+Een dergelijk databankenrecht is ook in mijn visie onwenselijk, omdat de KvK dan een monopolie krijgt op de verstrekking van informatie uit het Handelsregister zoals momenteel het geval is met het Kadaster:
+
+[ejure](http://www.ejure.nl/2013/01/open-overheidsdata/):
+> In het geval van het Kadaster heeft dit tot een volgens sommigen onwenselijke situatie geleid: door het vragen van hoge prijzen voor onbewerkte data onder restrictieve licenties en lage prijzen voor verrijkte data heeft het Kadaster een monopoliepositie verworven die onmogelijk te beconcurreren is.
+
+Dit zou geen groot probleem zijn als de KvK zou voorzien in alle gebruiksgevallen van het Handelsregister, maar het bestaan van derde partijen zoals openkvk.nl getuigt dat dit niet het geval is. Ook rijmt een dergelijke wet niet met het Open Data-beleid dat Nederland ambieert. 
+
+[openkvk.nl Google Group](https://groups.google.com/forum/#!topic/openkvk/aUA1mp8bJBY):
+> De aanpassing van deze wet is er primair op gericht om de Kamer van Koophandel Nederland "slagvaardiger" te maken en haar informatie positie verder te monopoliseren. Private alternatieven gebruikmakend van de informatie uit het Handelsregister kunnen de pas worden afgesneden. Wij stimuleren al ruim 5 jaar het gebruik van het handelsregister. OpenKvK heeft er eigenhandig voor gezorgd dat de arrogante houding van de Kamer van Koophandel 's nachts te sluiten moest worden herzien. De uit angst voor de apps die op OpenKvK bouwden begon de Kamer van Koophandel Nederland met de ontwikkeling van eigen apps en lapte de wet Markt en Overheid aan haar laars. Waar men in België de Kruispuntbank van Ondernemingen open heeft gemaakt volgens het Nederlandse BAG model: gratis maandelijkse updates, voor een dagelijkse mutatie bestand betaalt men, wil de Nederlandse overheid de luiken verder sluiten.
+> [...] Tevens zijn al een aantal gemeentes bij OpenKvK gekomen of ze niet van onze API gebruik konden maken, de toegang tot het NHR is praktisch onwerkbaar: er kan niet op losse velden worden gezocht.
+
+OpenState heeft een lovenswaardige brief gestuurd aan premier Rutte:
+
+[Persbericht OpenState](http://openstate.pr.co/109981-open-state-roept-kabinet-op-tot-openstelling-handelsregister):
+> Om echt economische waarde te genereren met open data, zal het kabinet ervoor moeten zorgen dat het handelsregister wordt open gesteld. [...] In Nederland is, in tegenstelling tot landen als het Verenigd Koninkrijk, België, Noorwegen en Denemarken, het handelsregister gesloten en zijn gegevens in het register niet voor iedereen vrij toegankelijk.
+

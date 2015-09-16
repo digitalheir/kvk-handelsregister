@@ -52,15 +52,13 @@ Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-
 ```
 
 ## Licentie
-**???**
-
 De Kamer van Koophandel specificeert zelf geen licentie, maar [Wet hergebruik van overheidsinformatie](http://wetten.lawly.nl/bwb/BWBR0036795) lijkt van toepassing. Onduidelijk is of het Handelsregister onder de [Databankenwet](http://wetten.lawly.nl/bwb/BWBR0010591) zou moeten vallen. Onlangs is een wetsvoorstel ingediend waardoor dit wel het geval zou zijn.
 
 
 > Het voorstel betreft: 
 - Verplichting voor bestuursorganen om geconstateerde onjuistheden in niet-authentieke gegevens in het handelsregister terug te melden; 
 - Vastlegging wettelijke basis voor de inputfinanciering, waarbij bestuursorganen het raadplegen van het handelsregister financieren door middel van een abonnement;
-[...]
+- [...]
 - **Voorbehoud met betrekking tot het databankenrecht voor de Kamer van Koophandel**
 
 ([Internetconsultatie Wijziging van de Handelsregisterwet 2007 en het Burgerlijk Wetboek](http://www.internetconsultatie.nl/handelsregister))

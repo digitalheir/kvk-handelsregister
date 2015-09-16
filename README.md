@@ -27,8 +27,10 @@ Root URL: https://leibniz.cloudant.com/kvk_handelsregister/
 |[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&skip=0&include_docs=true&startkey="0123"&endkey="0200043"&stale=ok)| Eerste 10 documenten vanaf kvk nummer `0123xxxx` tot `0200043x` |
 |[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?limit=10&skip=0&startkey="01000169"&reduce=false&include_docs=true&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer; eerste 10 documenten vanaf `01000169`|
 |[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&skip=0&startkey=["2","2"]&reduce=false&include_docs=true&stale=ok)|Index op postcode; eerste 10 documenten vanaf postcode `22xx XX`|
-|[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/ddoc/_view/all_names?limit=20&reduce=true&group_level=1&stale=ok)|Lijst met unieke handelsnamen; eerste 20|
+|[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/all_names?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke handelsnamen; eerste 10x00|
 |[Full text search](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_search/newSearch?q=duijsen&stale=ok&limit=10&skip=0)|Full text search geïndexeerd op elk veld; eerste 10 resultaten van zoeken op default index met query `duijsen`. Zie [Cloudant search tutorial](https://cloudant.com/for-developers/search/)|
+
+### Cloudant query
 
 Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:
 

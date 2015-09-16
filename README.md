@@ -16,7 +16,9 @@ Voor een (non-bulk) API waarmee je ook adressen kunt opvragen, verwijs ik naar h
 Ik geef geen garanties geven over de compleetheid van deze database. Men kan de versheid van een gegeven document staven aan het veld `lastSyncedWithKvK`.
 
 ## Gebruik
-De data staat in een CouchDB database en volgt de [API van CouchDB](https://wiki.apache.org/couchdb/HTTP_Document_API)
+De data staat in een CouchDB database en volgt de [API van CouchDB](https://wiki.apache.org/couchdb/HTTP_Document_API):
+
+Root URL: https://leibniz.cloudant.com/kvk_handelsregister/
 
 ### Voorbeelden
 

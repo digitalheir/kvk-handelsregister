@@ -30,6 +30,8 @@ Voorbeelden:
 Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:
 
 **`POST`**` https://leibniz.cloudant.com/kvk_handelsregister/_find*`
+
+body:
 ```json
 {
   "selector": {

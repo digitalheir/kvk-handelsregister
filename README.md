@@ -56,13 +56,14 @@ Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-
 
 De Kamer van Koophandel specificeert zelf geen licentie, maar [Wet hergebruik van overheidsinformatie](http://wetten.lawly.nl/bwb/BWBR0036795) lijkt van toepassing. Onduidelijk is of het Handelsregister onder de [Databankenwet](http://wetten.lawly.nl/bwb/BWBR0010591) zou moeten vallen. Onlangs is een wetsvoorstel ingediend waardoor dit wel het geval zou zijn.
 
-[Internetconsultatie Wijziging van de Handelsregisterwet 2007 en het Burgerlijk Wetboek](http://www.internetconsultatie.nl/handelsregister):
+
 > Het voorstel betreft: 
 - Verplichting voor bestuursorganen om geconstateerde onjuistheden in niet-authentieke gegevens in het handelsregister terug te melden; 
 - Vastlegging wettelijke basis voor de inputfinanciering, waarbij bestuursorganen het raadplegen van het handelsregister financieren door middel van een abonnement;
 [...]
 - **Voorbehoud met betrekking tot het databankenrecht voor de Kamer van Koophandel**
 
+([Internetconsultatie Wijziging van de Handelsregisterwet 2007 en het Burgerlijk Wetboek](http://www.internetconsultatie.nl/handelsregister))
 
 > In Nederland zullen thans drie instellingen worden aangewezen voor deze uitzondering omdat zij kostendekkend moeten werken: Het Kadaster, de Dienst Wegverkeer (RDW) en de Kamer van Koophandel. De reden om deze instellingen uit te zonderen is erin gelegen dat zij de eigen bedrijfsvoering voor een groot gedeelte uit de inkomsten uit het verstrekken van de door hen geproduceerde informatie moeten financieren. Indien deze bron van inkomsten zou worden verminderd, betekent dat een inkomstenderving die niet op een andere wijze kan worden gedragen.
 

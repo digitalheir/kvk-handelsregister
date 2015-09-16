@@ -87,6 +87,7 @@ Een dergelijk databankenrecht is ook in mijn visie onwenselijk, omdat de KvK dan
 Dit zou geen groot probleem zijn als de KvK zou voorzien in alle gebruiksgevallen van het Handelsregister, maar het bestaan van derde partijen zoals openkvk.nl getuigt dat dit niet het geval is. Ook rijmt een dergelijke wet niet met het Open Data-beleid dat Nederland ambieert. 
 
 > De aanpassing van deze wet is er primair op gericht om de Kamer van Koophandel Nederland "slagvaardiger" te maken en haar informatie positie verder te monopoliseren. Private alternatieven gebruikmakend van de informatie uit het Handelsregister kunnen de pas worden afgesneden. Wij stimuleren al ruim 5 jaar het gebruik van het handelsregister. OpenKvK heeft er eigenhandig voor gezorgd dat de arrogante houding van de Kamer van Koophandel 's nachts te sluiten moest worden herzien. De uit angst voor de apps die op OpenKvK bouwden begon de Kamer van Koophandel Nederland met de ontwikkeling van eigen apps en lapte de wet Markt en Overheid aan haar laars. Waar men in België de Kruispuntbank van Ondernemingen open heeft gemaakt volgens het Nederlandse BAG model: gratis maandelijkse updates, voor een dagelijkse mutatie bestand betaalt men, wil de Nederlandse overheid de luiken verder sluiten.
+
 > [...] Tevens zijn al een aantal gemeentes bij OpenKvK gekomen of ze niet van onze API gebruik konden maken, de toegang tot het NHR is praktisch onwerkbaar: er kan niet op losse velden worden gezocht.
 
 ([openkvk.nl Google Group](https://groups.google.com/forum/#!topic/openkvk/aUA1mp8bJBY))

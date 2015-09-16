@@ -18,7 +18,7 @@ Ik geef geen garanties geven over de compleetheid van deze database. Men kan de 
 ## Gebruik
 De data staat in een CouchDB database en volgt de [API van CouchDB](https://wiki.apache.org/couchdb/HTTP_Document_API)
 
-Voorbeelden:
+### Voorbeelden
 
 |URL|beschrijving|
 |---|---|
@@ -26,6 +26,7 @@ Voorbeelden:
 |[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?limit=10&startkey=%2201000169%22&reduce=false&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer|
 |[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=[%222%22,%222%22]&reduce=false&stale=ok)|Index op postcode|
 |[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/ddoc/_view/all_names?limit=20&reduce=true&group_level=1&stale=ok)|Lijst met unieke handelsnamen|
+|[Full text search](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_search/newSearch?q=duijsen&stale=ok&limit=10)|Full text search geïndexeerd op elk veld; zie [tutorial](https://cloudant.com/for-developers/search/)|
 
 Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:
 

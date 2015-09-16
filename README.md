@@ -24,11 +24,11 @@ Root URL: https://leibniz.cloudant.com/kvk_handelsregister/
 
 |URL|beschrijving|
 |---|---|
-|[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&include_docs=true&startkey="0123"&endkey="0200043"&stale=ok)| Eerste 10 documenten vanaf kvk nummer "0123" tot "0200043" |
-|[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?limit=10&startkey="01000169"&reduce=false&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer; eerste 10 documenten vanaf "01000169"|
-|[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=["2","2"]&reduce=false&stale=ok)|Index op postcode; eerste 10 documenten vanaf postcode `22** **`|
+|[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&include_docs=true&startkey="0123"&endkey="0200043"&stale=ok)| Eerste 10 documenten vanaf kvk nummer `0123xxxx` tot `0200043x` |
+|[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?limit=10&startkey="01000169"&reduce=false&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer; eerste 10 documenten vanaf `01000169`|
+|[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=["2","2"]&reduce=false&stale=ok)|Index op postcode; eerste 10 documenten vanaf postcode `22xx XX`|
 |[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/ddoc/_view/all_names?limit=20&reduce=true&group_level=1&stale=ok)|Lijst met unieke handelsnamen; eerste 20|
-|[Full text search](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_search/newSearch?q=duijsen&stale=ok&limit=10)|Full text search geïndexeerd op elk veld; eerste 10 resultaten van zoeken op default index met query 'duijsen'. Zie [Cloudant search tutorial](https://cloudant.com/for-developers/search/)|
+|[Full text search](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_search/newSearch?q=duijsen&stale=ok&limit=10)|Full text search geïndexeerd op elk veld; eerste 10 resultaten van zoeken op default index met query `duijsen`. Zie [Cloudant search tutorial](https://cloudant.com/for-developers/search/)|
 
 Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:
 

@@ -23,7 +23,7 @@ Voorbeelden:
 |URL|beschrijving|
 |---|---|
 |[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&include_docs=true&startkey=%220123%22&endkey=%220200043%22&stale=ok)| Primary index |
-|[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?startkey=%2201000169%22&group_level=2&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer|
+|[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?limit=10&startkey=%2201000169%22&group_level=2&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer|
 |[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&startkey=[%222%22,%222%22]&reduce=false&stale=ok)|Index op postcode|
 |[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/ddoc/_view/all_names?limit=20&reduce=true&group_level=1&stale=ok)|Lijst met unieke handelsnamen|
 

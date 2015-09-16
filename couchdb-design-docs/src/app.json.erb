@@ -1,0 +1,28 @@
+{
+    "docs": [
+        {
+            "_id": "_design/stats",
+            "views":
+            <%= map 'stats/views' %>,
+            "rewrites": [],
+            "language": "javascript",
+            "indexes": {}
+        },
+        {
+            "_id": "_design/render",
+            "views":
+            <%= map 'render/views' %>,
+            "rewrites": [],
+            "lists": {
+                "print_key":
+                <%= File.read('render/lists/print_key.js').to_json %>
+            },
+            "shows": {
+                "doc":
+                <%= File.read('render/shows/doc.js').to_json %>
+            },
+            "language": "javascript",
+            "indexes": {}
+        }
+    ]
+}

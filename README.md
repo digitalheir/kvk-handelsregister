@@ -29,7 +29,7 @@ Root URL: https://leibniz.cloudant.com/kvk_handelsregister/
 |[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&skip=0&startkey=["2","2"]&reduce=false&include_docs=true&stale=ok)|Index op postcode; eerste 10 documenten vanaf postcode `22xx XX`|
 |[Rechtspersonen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_view/rechtspersonen?limit=10&include_docs=true&stale=ok&reduce=false)|Lijst rechtspersonen, eerste 10|
 |[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/all_names?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke handelsnamen; eerste 1000|
-|[Rechtspersonen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/rechtspersonen?limit=1000&include_docs=true&stale=ok&reduce=false)|Lijst met namen rechtspersonen, eerste 1000|
+|[Rechtspersonen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_handelsnaam/rechtspersonen?limit=1000&include_docs=true&stale=ok&reduce=false)|Lijst met namen rechtspersonen, eerste 1000|
 |[Full text search](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_search/newSearch?q=duijsen&stale=ok&limit=10&skip=0)|Full text search geïndexeerd op elk veld; eerste 10 resultaten van zoeken op default index met query `duijsen`. Zie [Cloudant search tutorial](https://cloudant.com/for-developers/search/)|
 
 ### Cloudant query

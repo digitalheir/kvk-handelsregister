@@ -7,7 +7,7 @@ entity recognition in Nederlandse rechtspraak, en nergens een dergelijke lijst k
 
 Ik heb er voor gekozen om geen volledige adressen te verstrekken, alleen postcode en stadsnaam. Dit omdat ik niet wil dat deze lijst gebruikt gaat worden voor mailing lists, en om de KvK de inkomsten uit een [adressenbestand](http://www.kvk.nl/producten-bestellen/adressenbestand/) niet te ontnemen.
 
-Ik denk wel dat deze informatie (zonder adressen) nuttig kan zijn
+Ik denk wel dat deze informatie (zonder huisnummers) nuttig kan zijn
 voor andere andere onderzoekers, dus stel de database vrij beschikbaar. Momenteel is onduidelijk of dergelijk hergebruik
 wenselijk is en hier wordt momenteel politiek omtrent bedreven; zie de sectie [**Licentie**](#licentie).
 
@@ -22,15 +22,20 @@ Root URL: https://leibniz.cloudant.com/kvk_handelsregister/
 
 ### Voorbeelden
 
+#### JSON
 |URL|beschrijving|
 |---|---|
 |[_all_docs](https://leibniz.cloudant.com/kvk_handelsregister/_all_docs?limit=10&skip=0&include_docs=true&startkey="0123"&endkey="0200043"&stale=ok)| Eerste 10 documenten vanaf kvk nummer `0123xxxx` tot `0200043x` |
 |[kvknummer](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/kvknummer?limit=10&skip=0&startkey="01000169"&reduce=false&include_docs=true&stale=ok)|Index op dossiernummer, subdossiernummer, vestigingsnummer; eerste 10 documenten vanaf `01000169`|
 |[postcode](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_view/postcode?limit=10&skip=0&startkey=["2","2"]&reduce=false&include_docs=true&stale=ok)|Index op postcode; eerste 10 documenten vanaf postcode `22xx XX`|
-|[Rechtspersonen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_view/rechtspersonen?limit=10&include_docs=true&stale=ok&reduce=false)|Lijst rechtspersonen, eerste 10|
-|[Unieke handelsnamen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/all_names?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke handelsnamen; eerste 1000|
-|[Rechtspersonen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_handelsnaam/rechtspersonen?limit=1000&include_docs=true&stale=ok&reduce=false)|Lijst met namen rechtspersonen, eerste 1000|
+|[Rechtspersonen](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_view/rechtspersonen?limit=10&include_docs=true&stale=ok&reduce=false)|Index op naam rechtspersonen, eerste 10|
 |[Full text search](https://leibniz.cloudant.com/kvk_handelsregister/_design/api/_search/newSearch?q=duijsen&stale=ok&limit=10&skip=0)|Full text search geïndexeerd op elk veld; eerste 10 resultaten van zoeken op default index met query `duijsen`. Zie [Cloudant search tutorial](https://cloudant.com/for-developers/search/)|
+
+#### Plain text
+|URL|beschrijving|
+|---|---|
+|[rechtspersonen.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_handelsnaam/rechtspersonen?limit=1000&include_docs=true&stale=ok&reduce=false)|Lijst met namen rechtspersonen, eerste 1000|
+|[handelsnamen.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/all_names?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke handelsnamen; eerste 1000|
 
 ### Cloudant query
 

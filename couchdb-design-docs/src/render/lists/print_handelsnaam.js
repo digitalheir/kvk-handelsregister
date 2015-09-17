@@ -8,8 +8,10 @@ function (head, req) {
             }
         });
         while (row = getRow()) {
-            if(row.key && row.key.handelsnaam){
-                send(row.key.handelsnaam + "\n");
+            if(row.doc && row.doc.handelsnaam){
+                send(row.doc.handelsnaam + "\n");
+            }else{
+                send("Use include_docs=true\n");
             }
         }
     });

@@ -7,7 +7,9 @@
             "rewrites": [],
             "lists": {
                 "print_key":
-                <%= File.read('render/lists/print_key.js').to_json %>
+                <%= File.read('render/lists/print_key.js').to_json %>,
+                "print_handelsnaam":
+                <%= File.read('render/lists/print_handelsnaam.js').to_json %>
             },
             "shows": {
                 "doc":

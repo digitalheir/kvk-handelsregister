@@ -34,9 +34,13 @@ Root URL: https://leibniz.cloudant.com/kvk_handelsregister/
 #### Plain text
 |URL|beschrijving|
 |---|---|
-|[rechtspersonen.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_handelsnaam/rechtspersonen?limit=1000&include_docs=true&stale=ok&reduce=false)|Lijst met namen rechtspersonen, eerste 1000|
-|[handelsnamen.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/all_names?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke handelsnamen; eerste 1000|
-
+|[handelsnamen.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_handelsnaam/rechtspersonen?limit=1000&include_docs=true&stale=ok&reduce=false)|Lijst met namen rechtspersonen (niet noodzakelijk uniek), eerste 1000|
+|[alle_namen.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/alle_handelsnamen?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke handelsnamen; eerste 1000|
+|[statutaire_namen.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/statutaire_naam?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke statutaire namen; eerste 1000|
+|[vervallen_handelsnamen.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/vervallen_handelsnamen?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke vervallen handelsnamen; eerste 1000|
+|[naam_samenwerkingsverband.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/naam_samenwerkingsverband?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke nammen samenwerkingsverband; eerste 1000|
+|[naam.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/naam?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke "Naam" velden; eerste 1000|
+|[kvk_number.lst](https://leibniz.cloudant.com/kvk_handelsregister/_design/render/_list/print_key/kvk_number?limit=1000&stale=ok&group_level=1&descending=false)|Lijst met unieke KVK nummers; eerste 1000|
 ### Cloudant query
 
 Het is ook mogelijk om een [Cloudant query](https://cloudant.com/using-cloudant-query-tutorial/) uit te voeren op elk veld:
